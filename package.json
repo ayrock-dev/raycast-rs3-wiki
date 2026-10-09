@@ -1,0 +1,14 @@
+{
+  "name": "@ayrock/raycast-rs3-wiki",
+  "private": true,
+  "author": "ayrock-dev",
+  "packageManager": "pnpm@10.11.0",
+  "scripts": {
+    "dev": "pnpm --filter rs3-wiki dev",
+    "build": "pnpm --filter rs3-wiki build",
+    "check": "pnpm --filter rs3-wiki check",
+    "typecheck": "pnpm --filter rs3-wiki typecheck",
+    "test": "pnpm --filter rs3-wiki test",
+    "format": "pnpm --filter rs3-wiki format"
+  }
+}

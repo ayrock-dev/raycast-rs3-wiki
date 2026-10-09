@@ -1,0 +1,47 @@
+{
+  "name": "rs3-wiki",
+  "private": true,
+  "version": "0.0.0",
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "title": "RuneScape Wiki",
+  "description": "Search the RuneScape Wiki",
+  "icon": "icon.png",
+  "author": "ayrock",
+  "categories": [
+    "Web"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "search",
+      "title": "Search",
+      "subtitle": "RuneScape Wiki",
+      "description": "Search the RuneScape Wiki",
+      "mode": "view"
+    }
+  ],
+  "scripts": {
+    "dev": "ray develop",
+    "build": "ray build -e dist",
+    "publish": "ray publish",
+    "check": "biome check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.2",
+    "@types/node": "22.19.17",
+    "@types/react": "19.0.10",
+    "react-devtools": "6.1.1",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.3"
+  },
+  "dependencies": {
+    "@raycast/api": "^2.7.3",
+    "cheerio": "^1.2.0",
+    "html-entities": "^2.6.0",
+    "react": "^19.3.0",
+    "zod": "^4.6.5"
+  }
+}
