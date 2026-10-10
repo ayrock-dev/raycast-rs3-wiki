@@ -23,7 +23,7 @@
   "scripts": {
     "dev": "ray develop",
     "build": "ray build -e dist",
-    "publish": "ray publish",
+    "publish": "pnpm dlx @raycast/api@latest publish",
     "check": "biome check .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.2",
+    "@total-typescript/tsconfig": "1.0.4",
     "@types/node": "22.19.17",
     "@types/react": "19.0.10",
     "react-devtools": "6.1.1",

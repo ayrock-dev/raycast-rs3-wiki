@@ -181,12 +181,7 @@ export default function Search() {
     };
   }, [selectedPageId, selectedTitle]);
 
-  const searchDescription =
-    current.kind === 'error'
-      ? 'Suggestions are unavailable. Press Enter to search on the wiki.'
-      : current.kind === 'ready' && suggestions.length === 0
-        ? 'No page suggestions found. Press Enter to search on the wiki.'
-        : 'Press Enter to search the entire wiki, or select a page to preview it.';
+  const searchTitle = `Search Wiki for “${query}”`;
 
   return (
     <List
@@ -211,12 +206,10 @@ export default function Search() {
       {query && (
         <List.Item
           id="search"
-          title={`Search Wiki for “${query}”`}
+          title={searchTitle}
           icon={Icon.MagnifyingGlass}
           detail={
-            <List.Item.Detail
-              markdown={`# Search RuneScape Wiki\n\n${searchDescription}`}
-            />
+            <List.Item.Detail markdown={`# ${escapeMarkdown(searchTitle)}`} />
           }
           actions={
             <ActionPanel>
@@ -304,7 +297,7 @@ export default function Search() {
                   url={suggestion.url}
                 />
                 {infobox && infobox.variants.length > 1 && (
-                  <ActionPanel.Submenu title="Choose Variant">
+                  <ActionPanel.Submenu title="Choose Variant…">
                     {infobox.variants.map((variant, index) => {
                       const hint = variant.fields.find((field) =>
                         [
