@@ -18,6 +18,9 @@
           "level": "error",
           "fix": "safe"
         }
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
       }
     }
   },
